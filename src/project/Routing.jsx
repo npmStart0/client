@@ -4,7 +4,7 @@ import { Home } from "./Home.jsx"
 export const Routing = () => {
     return <>
         <Routes>
-            <Route path="Home" element={<Home></Home>}></Route>
+            <Route path="/" element={<Home></Home>}></Route>
         </Routes>
     </>
 }
