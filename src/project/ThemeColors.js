@@ -16,7 +16,7 @@ const theme = createTheme({
     grey: {
       900: '#212121', // Very dark grey
       500: '#555555', // Regular grey
-      100: '#e0dddd', // Light grey
+      100: '#E0DDDD', // Light grey
     },
     text: {
       primary: '#FFFFFF', // White text color
