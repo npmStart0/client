@@ -13,8 +13,6 @@ const theme = createTheme({
       main: '#FFD823',  // Regular yellow
       light: '#FFBC39', // Light yellow
     },
-    // Example of usage with this font
-    // sx={{ backgroundColor: theme => theme.palette.grey[100] }}
     grey: {
       900: '#212121', // Very dark grey
       500: '#555555', // Regular grey

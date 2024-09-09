@@ -1,3 +1,5 @@
+import { Box, Typography, Link } from '@mui/material';
+
 export const AboutUs = () => {
     return (
         <Box sx={{
@@ -30,5 +32,3 @@ export const AboutUs = () => {
         </Box>
     );
 };
-
-
