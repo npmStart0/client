@@ -1,23 +1,30 @@
 import { createTheme } from '@mui/material/styles';
 
-// יצירת נושא עם הצבעים הגלובליים
+// Creating a theme with global colors
 const theme = createTheme({
   palette: {
     primary: {
-      dark: '#297FB8',  // תכלת כהה
-      main: '#3598DB',  // תכלת רגיל
-      light: '#49ACEF', // תכלת בהיר
+      dark: '#297FB8',  // Dark cyan
+      main: '#2666CB',  // Regular cyan
+      light: '#49ACEF', // Light cyan
     },
     secondary: {
-      dark: '#F1C40F',  // צהוב כהה
-      main: '#FFD823',  // צהוב רגיל
-      light: '#FFBC39', // צהוב בהיר
+      dark: '#F1C40F',  // Dark yellow
+      main: '#FFD823',  // Regular yellow
+      light: '#FFBC39', // Light yellow
+    },
+    // Example of usage with this font
+    // sx={{ backgroundColor: theme => theme.palette.grey[100] }}
+    grey: {
+      900: '#212121', // Very dark grey
+      500: '#555555', // Regular grey
+      100: '#E0DDDD', // Light grey
     },
     text: {
-      primary: '#555555', // אפור רגיל
+      primary: '#FFFFFF', // White text color
     },
     background: {
-      default: '#696969', // אפור כהה (שחור רגיל)
+      default: '#181818', // Dark grey (regular black)
     },
   },
 });
