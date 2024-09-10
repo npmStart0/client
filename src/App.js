@@ -1,13 +1,9 @@
 import './App.css';
-import { Main } from './project/components/Main';
-import { ThemeProvider } from '@mui/material/styles';
-import theme from './project/ThemeColors'; // ייבוא הנושא
+import { Main } from './project/Main';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Main></Main>
-    </ThemeProvider>
+    <Main></Main>
   );
 }
 
