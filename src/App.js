@@ -1,9 +1,13 @@
 import './App.css';
-import { Main } from './project/Main';
+import { Main } from './project/components/Main';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './project/ThemeColors'; // ייבוא הנושא
 
 function App() {
   return (
-    <Main></Main>
+    <ThemeProvider theme={theme}>
+      <Main></Main>
+    </ThemeProvider>
   );
 }
 

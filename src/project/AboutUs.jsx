@@ -1,9 +1,9 @@
 import { Box, Typography, Link } from '@mui/material';
 
-export const Home = () => {
+export const AboutUs = () => {
     return (
         <Box sx={{
-            backgroundColor: '#181818', 
+            backgroundColor: 'background.default', 
             height: '100vh', 
             // width: '100vw', 
             display: 'flex', 
@@ -11,20 +11,20 @@ export const Home = () => {
             justifyContent: 'center', 
             alignItems: 'center', 
             padding: '20px',
-            boxSizing: 'border-box', // לוודא שהשוליים נכללים ברוחב ובגובה
+            boxSizing: 'border-box', // Make sure the margins are included in the width and height
         }}>
              <img src={`${process.env.PUBLIC_URL}/images/logo.jpg`} alt="logo" style={{ display:'block', marginRight: 'auto', marginLeft: 'auto' }} />
-            <Typography variant="h2" style={{ color: '#E0DDDD', fontFamily: 'zrima' }}>
+            <Typography variant="h2" style={{ fontFamily: 'zrima' }} sx={{color: 'grey.100'}}>
                 ...האתר בשלבי פיתוח
             </Typography>
-            <Typography variant="h4" style={{ color: '#E0DDDD', fontFamily: 'Courier Prime' }}>
-                <Link href="https://github.com/NpmStart2" target="_blank" underline="hover" style={{ color: '#2666CB' }}>
+            <Typography variant="h4" style={{ fontFamily: 'Courier Prime' }} sx={{color: 'grey.100'}}>
+                <Link href="https://github.com/NpmStart0" target="_blank" underline="hover" sx={{color: 'primary.main'}}>
                     Github
                 </Link> 
                 מפתחים? עקבו אחרינו ב
             </Typography>
-            <Typography variant="h5" style={{ color: '#E0DDDD', fontFamily: 'zrima', marginTop: '20px' }}>
-                <Link href="mailto:npmstart2@gmail.com" underline="hover" style={{ color: '#2666CB' }}>
+            <Typography variant="h5" style={{ fontFamily: 'zrima', marginTop: '20px' }} sx={{color: 'grey.100'}}>
+                <Link href="mailto:npmstart2@gmail.com" underline="hover" sx={{color: 'primary.main'}}>
                     npmstart2@gmail.com
                 </Link> 
                 ג'ונרית? רוצה להיות חלק מהצוות המוביל? צרי איתנו קשר
