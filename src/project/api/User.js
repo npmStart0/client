@@ -1,54 +1,53 @@
 import axios from "axios";
 
-const url = `${process.env.url}/User`
+const url = `${process.env.URL}/User`;
 
-//הוספת משתמש חדש והחזרתו
 export const addUser = async (user) => {
-    let newUser = null
     try {
-        await axios.post(`${url}`, user).then(result => newUser = result.data)
+        const result = await axios.post(url, user);
+        return result.data;
+    } catch (error) {
+        console.error('Error in addUser:', error);
+        return null;
     }
-    catch { return null }
-    return newUser
-}
+};
 
-//החזרת פרטי משתמש לפי אימייל וסיסמה
 export const getUser = async (email, password) => {
-    let user = null
     try {
-        await axios.get(`${url}/${email}/${password}`)
-            .then(result => { user = result.data })
+        const result = await axios.get(`${url}/${email}/${password}`);
+        return result.data;
+    } catch (error) {
+        console.error("Error in getUser:", error);
+        return null;
     }
-    catch { return null }
-    return user
-}
+};
 
-// החזרת כל המשתמשים
 export const getUsers = async () => {
-    let users = null
     try {
-        await axios.get(`${url}`).then(result => users = result.data)
+        const result = await axios.get(url);
+        return result.data;
+    } catch (error) {
+        console.error("Error in getUsers:", error);
+        return null;
     }
-    catch { return null }
-    return users
-}
+};
 
-// עדכון פרטי המשתמש
 export const updateUser = async (user) => {
-    let newUser = null
     try {
-        await axios.put(`${url}`, user).then(result => newUser = result.data)
+        const result = await axios.put(url, user);
+        return result.data;
+    } catch (error) {
+        console.error("Error in updateUser:", error);
+        return null;
     }
-    catch { return null }
-    return newUser
-}
+};
 
-// מחיקת משתמש
 export const deleteUser = async (id) => {
-    let succes = null
     try {
-        await axios.delete(`${url}/:id`, id).then(result => succes = result.data)
+        const result = await axios.delete(`${url}/${id}`);
+        return result.data;
+    } catch (error) {
+        console.error("Error in deleteUser:", error);
+        return null;
     }
-    catch { return null }
-    return succes
-}
+};
