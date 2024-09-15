@@ -1,53 +1,54 @@
 import axios from "axios";
 
-const url = `${process.env.URL}/Subject`;
+const url = `${process.env.url}/Subject`
 
+//הוספת נושא חדש והחזרתו
 export const addSubject = async (Subject) => {
+    let newSubject = null
     try {
-        const result = await axios.post(url, Subject);
-        return result.data;
-    } catch (error) {
-        console.error("Error in addSubject:", error);
-        return null;
+        await axios.post(`${url}`, Subject).then(result => newSubject = result.data)
     }
-};
+    catch { return null }
+    return newSubject
+}
 
+//החזרת פרטי נושא לפי קוד
 export const getSubject = async (id) => {
+    let Subject = null
     try {
-        const result = await axios.get(`${url}/${id}`);
-        return result.data;
-    } catch (error) {
-        console.error("Error in getSubject:", error);
-        return null;
+        await axios.get(`${url}/${id}`)
+            .then(result => { Subject = result.data })
     }
-};
+    catch { return null }
+    return Subject
+}
 
+// החזרת כל הנושאים
 export const getSubjects = async () => {
+    let Subjects = null
     try {
-        const result = await axios.get(url);
-        return result.data;
-    } catch (error) {
-        console.error("Error in getSubjects:", error);
-        return null;
+        await axios.get(`${url}`).then(result => Subjects = result.data)
     }
-};
+    catch { return null }
+    return Subjects
+}
 
+// עדכון פרטי הנושא
 export const updateSubject = async (Subject) => {
+    let newSubject = null
     try {
-        const result = await axios.put(url, Subject);
-        return result.data;
-    } catch (error) {
-        console.error("Error in updateSubject:", error);
-        return null;
+        await axios.put(`${url}`, Subject).then(result => newSubject = result.data)
     }
-};
+    catch { return null }
+    return newSubject
+}
 
+// מחיקת נושא
 export const deleteSubject = async (id) => {
+    let succes = null
     try {
-        const result = await axios.delete(`${url}/${id}`);
-        return result.data;
-    } catch (error) {
-        console.error("Error in deleteSubject:", error);
-        return null;
+        await axios.delete(`${url}/:id`, id).then(result => succes = result.data)
     }
-};
+    catch { return null }
+    return succes
+}
