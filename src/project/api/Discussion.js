@@ -1,54 +1,53 @@
 import axios from "axios";
 
-const url = `${process.env.url}/Discussion`
+const url = `${process.env.URL}/Discussion`;
 
-//הוספת דיון חדש והחזרתו
 export const addDiscussion = async (Discussion) => {
-    let newDiscussion = null
     try {
-        await axios.post(`${url}`, Discussion).then(result => newDiscussion = result.data)
+        const result = await axios.post(url, Discussion);
+        return result.data;
+    } catch (error) {
+        console.error("Error in addDiscussion:", error);
+        return null;
     }
-    catch { return null }
-    return newDiscussion
-}
+};
 
-//החזרת פרטי דיון לפי קוד 
 export const getDiscussion = async (id) => {
-    let Discussion = null
     try {
-        await axios.get(`${url}/${id}`)
-            .then(result => { Discussion = result.data })
+        const result = await axios.get(`${url}/${id}`);
+        return result.data;
+    } catch (error) {
+        console.error("Error in getDiscussion:", error);
+        return null;
     }
-    catch { return null }
-    return Discussion
-}
+};
 
-// החזרת כל הדיוןים
 export const getDiscussions = async () => {
-    let Discussions = null
     try {
-        await axios.get(`${url}`).then(result => Discussions = result.data)
+        const result = await axios.get(url);
+        return result.data;
+    } catch (error) {
+        console.error("Error in getDiscussions:", error);
+        return null;
     }
-    catch { return null }
-    return Discussions
-}
+};
 
-// עדכון פרטי הדיון
 export const updateDiscussion = async (Discussion) => {
-    let newDiscussion = null
     try {
-        await axios.put(`${url}`, Discussion).then(result => newDiscussion = result.data)
+        const result = await axios.put(url, Discussion);
+        return result.data;
+    } catch (error) {
+        console.error("Error in updateDiscussion:", error);
+        return null;
     }
-    catch { return null }
-    return newDiscussion
-}
+};
 
-// מחיקת דיון
 export const deleteDiscussion = async (id) => {
-    let succes = null
     try {
-        await axios.delete(`${url}/:id`, id).then(result => succes = result.data)
+        const result = await axios.delete(`${url}/${id}`);
+        return result.data;
+    } catch (error) {
+        console.error("Error in deleteDiscussion:", error);
+        return null;
     }
-    catch { return null }
-    return succes
-}
+};

@@ -1,54 +1,53 @@
 import axios from "axios";
 
-const url = `${process.env.url}/Comment`
+const url = `${process.env.URL}/Discussion`;
 
-//הוספת תגובה חדשה והחזרתה
-export const addComment = async (Comment) => {
-    let newComment = null
+export const addDiscussion = async (Discussion) => {
     try {
-        await axios.post(`${url}`, Comment).then(result => newComment = result.data)
+        const result = await axios.post(url, Discussion);
+        return result.data;
+    } catch (error) {
+        console.error("Error in addDiscussion:", error);
+        return null;
     }
-    catch { return null }
-    return newComment
-}
+};
 
-//החזרת פרטי תגובה לפי קוד
-export const getComment = async (id) => {
-    let Comment = null
+export const getDiscussion = async (id) => {
     try {
-        await axios.get(`${url}/${id}`)
-            .then(result => { Comment = result.data })
+        const result = await axios.get(`${url}/${id}`);
+        return result.data;
+    } catch (error) {
+        console.error("Error in getDiscussion:", error);
+        return null;
     }
-    catch { return null }
-    return Comment
-}
+};
 
-// החזרת כל התגובות
-export const getComments = async () => {
-    let Comments = null
+export const getDiscussions = async () => {
     try {
-        await axios.get(`${url}`).then(result => Comments = result.data)
+        const result = await axios.get(url);
+        return result.data;
+    } catch (error) {
+        console.error("Error in getDiscussions:", error);
+        return null;
     }
-    catch { return null }
-    return Comments
-}
+};
 
-// עדכון פרטי התגובה
-export const updateComment = async (Comment) => {
-    let newComment = null
+export const updateDiscussion = async (Discussion) => {
     try {
-        await axios.put(`${url}`, Comment).then(result => newComment = result.data)
+        const result = await axios.put(url, Discussion);
+        return result.data;
+    } catch (error) {
+        console.error("Error in updateDiscussion:", error);
+        return null;
     }
-    catch { return null }
-    return newComment
-}
+};
 
-// מחיקת תגובה
-export const deleteComment = async (id) => {
-    let succes = null
+export const deleteDiscussion = async (id) => {
     try {
-        await axios.delete(`${url}/:id`, id).then(result => succes = result.data)
+        const result = await axios.delete(`${url}/${id}`);
+        return result.data;
+    } catch (error) {
+        console.error("Error in deleteDiscussion:", error);
+        return null;
     }
-    catch { return null }
-    return succes
-}
+};
