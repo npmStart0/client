@@ -1,53 +1,53 @@
 import axios from "axios";
 
-const url = `${process.env.URL}/Discussion`;
+const url = `${process.env.URL}/Comment`;
 
-export const addDiscussion = async (Discussion) => {
+export const addComment = async (Comment) => {
     try {
-        const result = await axios.post(url, Discussion);
+        const result = await axios.post(url, Comment);
         return result.data;
     } catch (error) {
-        console.error("Error in addDiscussion:", error);
+        console.error("Error in addComment:", error);
         return null;
     }
 };
 
-export const getDiscussion = async (id) => {
+export const getComment = async (id) => {
     try {
         const result = await axios.get(`${url}/${id}`);
         return result.data;
     } catch (error) {
-        console.error("Error in getDiscussion:", error);
+        console.error("Error in getComment:", error);
         return null;
     }
 };
 
-export const getDiscussions = async () => {
+export const getComments = async () => {
     try {
         const result = await axios.get(url);
         return result.data;
     } catch (error) {
-        console.error("Error in getDiscussions:", error);
+        console.error("Error in getComments:", error);
         return null;
     }
 };
 
-export const updateDiscussion = async (Discussion) => {
+export const updateComment = async (Comment) => {
     try {
-        const result = await axios.put(url, Discussion);
+        const result = await axios.put(url, Comment);
         return result.data;
     } catch (error) {
-        console.error("Error in updateDiscussion:", error);
+        console.error("Error in updateComment:", error);
         return null;
     }
 };
 
-export const deleteDiscussion = async (id) => {
+export const deleteComment = async (id) => {
     try {
         const result = await axios.delete(`${url}/${id}`);
         return result.data;
     } catch (error) {
-        console.error("Error in deleteDiscussion:", error);
+        console.error("Error in deleteComment:", error);
         return null;
     }
 };
