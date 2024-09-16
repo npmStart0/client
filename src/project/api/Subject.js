@@ -19,7 +19,7 @@ export const getSubject = async (id) => {
     } catch (error) {
         console.error("Error in getSubject:", error);
         return null;
-    }
+    };
 };
 
 export const getSubjects = async () => {
@@ -29,7 +29,7 @@ export const getSubjects = async () => {
     } catch (error) {
         console.error("Error in getSubjects:", error);
         return null;
-    }
+    };
 };
 
 export const updateSubject = async (Subject) => {
@@ -39,7 +39,7 @@ export const updateSubject = async (Subject) => {
     } catch (error) {
         console.error("Error in updateSubject:", error);
         return null;
-    }
+    };
 };
 
 export const deleteSubject = async (id) => {
@@ -49,5 +49,5 @@ export const deleteSubject = async (id) => {
     } catch (error) {
         console.error("Error in deleteSubject:", error);
         return null;
-    }
+    };
 };

@@ -9,7 +9,7 @@ export const addDiscussion = async (Discussion) => {
     } catch (error) {
         console.error("Error in addDiscussion:", error);
         return null;
-    }
+    };
 };
 
 export const getDiscussion = async (id) => {
@@ -19,7 +19,7 @@ export const getDiscussion = async (id) => {
     } catch (error) {
         console.error("Error in getDiscussion:", error);
         return null;
-    }
+    };
 };
 
 export const getDiscussions = async () => {
@@ -29,7 +29,7 @@ export const getDiscussions = async () => {
     } catch (error) {
         console.error("Error in getDiscussions:", error);
         return null;
-    }
+    };
 };
 
 export const updateDiscussion = async (Discussion) => {
@@ -39,7 +39,7 @@ export const updateDiscussion = async (Discussion) => {
     } catch (error) {
         console.error("Error in updateDiscussion:", error);
         return null;
-    }
+    };
 };
 
 export const deleteDiscussion = async (id) => {
@@ -49,5 +49,5 @@ export const deleteDiscussion = async (id) => {
     } catch (error) {
         console.error("Error in deleteDiscussion:", error);
         return null;
-    }
+    };
 };

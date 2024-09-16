@@ -9,7 +9,7 @@ export const addComment = async (Comment) => {
     } catch (error) {
         console.error("Error in addComment:", error);
         return null;
-    }
+    };
 };
 
 export const getComment = async (id) => {
@@ -19,7 +19,7 @@ export const getComment = async (id) => {
     } catch (error) {
         console.error("Error in getComment:", error);
         return null;
-    }
+    };
 };
 
 export const getComments = async () => {
@@ -29,7 +29,7 @@ export const getComments = async () => {
     } catch (error) {
         console.error("Error in getComments:", error);
         return null;
-    }
+    };
 };
 
 export const updateComment = async (Comment) => {
@@ -39,7 +39,7 @@ export const updateComment = async (Comment) => {
     } catch (error) {
         console.error("Error in updateComment:", error);
         return null;
-    }
+    };
 };
 
 export const deleteComment = async (id) => {
@@ -49,5 +49,5 @@ export const deleteComment = async (id) => {
     } catch (error) {
         console.error("Error in deleteComment:", error);
         return null;
-    }
+    };
 };

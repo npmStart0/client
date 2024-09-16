@@ -9,7 +9,7 @@ export const addUser = async (user) => {
     } catch (error) {
         console.error('Error in addUser:', error);
         return null;
-    }
+    };
 };
 
 export const getUser = async (email, password) => {
@@ -19,7 +19,7 @@ export const getUser = async (email, password) => {
     } catch (error) {
         console.error("Error in getUser:", error);
         return null;
-    }
+    };
 };
 
 export const getUsers = async () => {
@@ -29,7 +29,7 @@ export const getUsers = async () => {
     } catch (error) {
         console.error("Error in getUsers:", error);
         return null;
-    }
+    };
 };
 
 export const updateUser = async (user) => {
@@ -39,7 +39,7 @@ export const updateUser = async (user) => {
     } catch (error) {
         console.error("Error in updateUser:", error);
         return null;
-    }
+    };
 };
 
 export const deleteUser = async (id) => {
@@ -49,5 +49,5 @@ export const deleteUser = async (id) => {
     } catch (error) {
         console.error("Error in deleteUser:", error);
         return null;
-    }
+    };
 };
