@@ -1,54 +1,53 @@
 import axios from "axios";
 
-const url = `${process.env.url}/Comment`
+const url = `${process.env.URL}/Comment`;
 
-//הוספת תגובה חדשה והחזרתה
 export const addComment = async (Comment) => {
-    let newComment = null
     try {
-        await axios.post(`${url}`, Comment).then(result => newComment = result.data)
-    }
-    catch { return null }
-    return newComment
-}
+        const result = await axios.post(url, Comment);
+        return result.data;
+    } catch (error) {
+        console.error("Error in addComment:", error);
+        return null;
+    };
+};
 
-//החזרת פרטי תגובה לפי קוד
 export const getComment = async (id) => {
-    let Comment = null
     try {
-        await axios.get(`${url}/${id}`)
-            .then(result => { Comment = result.data })
-    }
-    catch { return null }
-    return Comment
-}
+        const result = await axios.get(`${url}/${id}`);
+        return result.data;
+    } catch (error) {
+        console.error("Error in getComment:", error);
+        return null;
+    };
+};
 
-// החזרת כל התגובות
 export const getComments = async () => {
-    let Comments = null
     try {
-        await axios.get(`${url}`).then(result => Comments = result.data)
-    }
-    catch { return null }
-    return Comments
-}
+        const result = await axios.get(url);
+        return result.data;
+    } catch (error) {
+        console.error("Error in getComments:", error);
+        return null;
+    };
+};
 
-// עדכון פרטי התגובה
 export const updateComment = async (Comment) => {
-    let newComment = null
     try {
-        await axios.put(`${url}`, Comment).then(result => newComment = result.data)
-    }
-    catch { return null }
-    return newComment
-}
+        const result = await axios.put(url, Comment);
+        return result.data;
+    } catch (error) {
+        console.error("Error in updateComment:", error);
+        return null;
+    };
+};
 
-// מחיקת תגובה
 export const deleteComment = async (id) => {
-    let succes = null
     try {
-        await axios.delete(`${url}/:id`, id).then(result => succes = result.data)
-    }
-    catch { return null }
-    return succes
-}
+        const result = await axios.delete(`${url}/${id}`);
+        return result.data;
+    } catch (error) {
+        console.error("Error in deleteComment:", error);
+        return null;
+    };
+};
