@@ -1,0 +1,1 @@
+Store images and other static assets in an this folder.
