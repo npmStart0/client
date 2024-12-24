@@ -18,3 +18,6 @@ The High-Tech Forum Client project is a powerful client-side application designe
 5. Run the project with the command : `npm start`
 
 ##### Note: In order for all the options in the application to run correctly, you also need to download the server-side project from the repository - server
+
+## License  
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
