@@ -24,8 +24,24 @@ const theme = createTheme({
             default: '#181818',
         },
         typography: {
-            fontFamily: '\'Open Sans\', sans-serif',
-            secondaryFont: '\'Fredoka\', sans-serif', 
+            fonts: [
+                {
+                    fontFamily: 'Open Sans',
+                    src: `
+                        url('https://fonts.gstatic.com/s/opensans/
+                            v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4iaVIGxA.woff2')
+                        format('woff2')
+                    `,
+                },
+                {
+                    fontFamily: 'Fredoka',
+                    src: `
+                        url('https://fonts.gstatic.com/s/fredoka/
+                            v14/X7nP4b87HvSqjb_WIi2yDCRwoQ_k7367_B-i2yQag0-mac3O8SL8E-mKpNk.woff2')
+                        format('woff2')
+                    `,
+                },
+            ].join(',')
         },
     },
 });
