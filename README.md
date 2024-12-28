@@ -12,7 +12,7 @@ The High-Tech Forum Client project is a powerful client-side application designe
 
 1. Clone the repository `git clone https://github.com/npmStart0/client.git`
 2. Create a .env file in the root directory of the project containing the database connection string in the following format:
-`URL=http://localhost:5131`
+`REACT_APP_API_URL=http://localhost:5131/api`
 3. Open the project in Visual Studio Code.
 4. Open the terminal window and install the necessary installations by the command : `npm install`
 5. Run the project with the command : `npm start`
