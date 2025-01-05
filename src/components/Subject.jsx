@@ -1,13 +1,20 @@
 import React from 'react';
 import { Box, Button, Typography, useTheme } from '@mui/material';
 import { ContactSupportOutlined, DescriptionOutlined, Groups, PersonSearch }  from '@mui/icons-material';
+import { useNavigate } from 'react-router';
 
 export const Subject = (props) => {
 
     const theme = useTheme();
+    const navigate = useNavigate();
+
+    const hundleOnClick = (id) => {
+        navigate(`?id=${id}`);
+    };
 
     return (
         <Button
+            onClick={hundleOnClick}
             sx={{
                 width: 400,
                 color: theme.palette.text.primary,
@@ -55,4 +62,3 @@ export const Subject = (props) => {
         </Button>
     );
 };
-
