@@ -8,8 +8,8 @@ export const Subject = (props) => {
     const theme = useTheme();
     const navigate = useNavigate();
 
-    const hundleOnClick = (id) => {
-        navigate(`?id=${id}`);
+    const hundleOnClick = () => {
+        navigate(`?id=${props.id}`);
     };
 
     return (
