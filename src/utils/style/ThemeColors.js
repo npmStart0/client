@@ -19,6 +19,7 @@ const theme = createTheme({
         },
         text: {
             primary: '#FFFFFF',
+            link:'#3598DB',
         },
         background: {
             default: '#181818',
