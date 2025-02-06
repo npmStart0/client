@@ -1,20 +1,5 @@
-:root {
-  --font-primary: 'Open Sans', sans-serif;
-  --font-secondary: 'Fredoka', sans-serif;
-}
-
 body {
   margin: 0;
-  font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.secondary-font {
-  font-family: var(--font-secondary);
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

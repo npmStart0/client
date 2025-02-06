@@ -3,8 +3,15 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import MarkunreadIcon from '@mui/icons-material/Markunread';
 import CodeIcon from '@mui/icons-material/Code';
 import Diversity2Icon from '@mui/icons-material/Diversity2';
+import { PopUp } from './PopUp';
+import { useState } from 'react';
 
 export const Home = () => {
+    const [openDialog, setOpenDialog] = useState(false);
+
+    const togglePopup = () => {
+        setOpenDialog(!openDialog);
+    };
     return (
         <>
             <Box sx={{ backgroundColor: 'background.default', position: 'relative' }}>
@@ -142,7 +149,8 @@ export const Home = () => {
                             alignItems: 'center',
                             justifyContent: 'center',
                             padding: '5%',
-                        }}>
+                            cursor:  'pointer',
+                        }}onClick={togglePopup}>
                         <Diversity2Icon
                             sx={{
                                 color: 'secondary.main', 
@@ -196,6 +204,7 @@ export const Home = () => {
                     </Box>
                 </Container >
             </Box >
+            <PopUp open={openDialog} onClose={togglePopup} /> 
 
             <Box sx={{ borderTop: '1px solid white', backgroundColor: 'background.default', padding: '2%' }}>
                 <Container maxWidth="lg">
