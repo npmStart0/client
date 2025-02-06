@@ -8,7 +8,7 @@ import CardMedia from '@mui/material/CardMedia';
 const pages = [   
     { name: 'אודותינו', route: '/about' },
     { name: 'דיונים', route: '/discuss' },
-    { name: 'בית', route: '/home' },
+    { name: 'בית', route: '/' },
 ];
 
 export const Nav = () => {

@@ -2,6 +2,7 @@ import { Box, Button, Container, Typography, useTheme } from '@mui/material';
 import { GitHub, Code, Diversity2, Markunread } from '@mui/icons-material';
 import { TextAndIcon } from './home.components/text.and.icon';
 import { WhiteLine } from './home.components/white.line';
+import { hexToRgbA } from '../../utils/style/convertColor'
 
 export const Home = () => {
 
@@ -48,10 +49,10 @@ export const Home = () => {
                             <Typography
                                 variant="h5"
                                 sx={{
-                                    color: 'grey.100',
+                                    fontFamily: 'Open Sans',
+                                    color: theme.palette.grey[100],
                                     maxWidth: '40%',
                                     textAlign: 'right',
-                                    fontFamily: 'Open Sans',
                                 }}>
                                 .אנחנו קהילה מקצועית של ג'וניוריות חרדיות בתחומי ההייטק
                                 כאן תמצאי פורומים לתמיכה, שיתוף ולימוד. זה המקום לשאול
