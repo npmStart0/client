@@ -9,42 +9,48 @@ export const PageTitle = ({ props }) => {
             display="flex"
             justifyContent="center"
             alignItems="center"
-            height="100vh"
-            width="100vw"
-            textAlign="center"
-            sx={{
-                background: `radial-gradient(circle,
-                    ${theme.palette.primary.light} 0%, ${theme.palette.background.default} 100%)`,
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-            }}
         >
-            <Typography
-                variant="h2"
-                component="p"
+            <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                height="80vh"
+                width="60vw"
+                textAlign="center"
                 sx={{
-                    paddingTop: '50px',
-                    paddingBottom: '10px',
-                    fontFamily: 'Fredoka',
-                    textUnderlinePosition: 'from-font',
-                    textDecorationSkipInk: 'none',
-                    color: 'text.primary',
+                    background: `radial-gradient(circle,
+                    ${theme.palette.primary.dark} 0%, ${theme.palette.background.default} 70%)`,
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
                 }}
             >
-                {props.title}
                 <Typography
-                    variant="h5"
+                    variant="h2"
                     component="p"
                     sx={{
+                        paddingTop: '50px',
+                        paddingBottom: '10px',
                         fontFamily: 'Fredoka',
                         textUnderlinePosition: 'from-font',
                         textDecorationSkipInk: 'none',
-                        color: 'secondary.light',
+                        color: 'text.primary',
                     }}
                 >
-                    {props.subtitle}
+                    {props.title}
+                    <Typography
+                        variant="h5"
+                        component="p"
+                        sx={{
+                            fontFamily: 'Fredoka',
+                            textUnderlinePosition: 'from-font',
+                            textDecorationSkipInk: 'none',
+                            color: 'secondary.light',
+                        }}
+                    >
+                        {props.subtitle}
+                    </Typography>
                 </Typography>
-            </Typography>
+            </Box>
         </Box>
     );
 };
