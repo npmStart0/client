@@ -14,7 +14,7 @@ const pages = [
 export const Nav = () => {
     return (
         <>
-            <AppBar position="static" sx={{ backgroundColor: 'background.default', boxShadow: 'none' }}>
+            <AppBar position="fixed" sx={{ backgroundColor: 'background.default', boxShadow: 'none' }}>
                 <Toolbar sx={{ borderBottom: '1px solid lightgray' ,justifyContent: 'flex-end'}} >
                     {pages.map((page) => (
                         <Button

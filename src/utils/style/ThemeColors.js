@@ -15,11 +15,11 @@ const theme = createTheme({
         grey: {
             900: '#212121',
             500: '#555555',
-            100: '#E0DDDD',
+            100: '#696969',
         },
         text: {
             primary: '#FFFFFF',
-            link:'#3598DB',
+            link: '#3598DB',
         },
         background: {
             default: '#181818',

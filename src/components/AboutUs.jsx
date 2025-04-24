@@ -9,6 +9,8 @@ export const AboutUs = () => {
             <Container sx={{
                 height: '100vh',
                 display: 'flex',
+                overflowY: 'hidden',
+                overflowX: 'hidden',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
